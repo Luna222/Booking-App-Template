@@ -12,7 +12,7 @@ export default function Navbar() {
         </div>
       </div>
 
-      <nav className="flex flex-wrap">
+      <nav className="flex justify-center tablet:justify-start flex-wrap">
         {NAVBAR_DATA.map(({ type, icon, active }) => (
           <NavBarItem key={type} type={type} icon={icon} active={active} />
         ))}
