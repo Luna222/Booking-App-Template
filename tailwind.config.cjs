@@ -70,10 +70,11 @@ module.exports = {
           boxShadow: theme('boxShadow.xl'),
         },
         '.primaryBtn': {
+          color: theme('colors.navyBlue.200'),
+          backgroundColor: '#e9ecef',
+          padding: '0.5rem 1rem',
           cursor: 'pointer',
           lineHeight: 'inherit',
-          backgroundColor: '#f9f9f9',
-          marginBottom: theme('spacing[2.5]'),
         },
         '.container-md': {
           maxWidth: '1280px',
@@ -83,7 +84,7 @@ module.exports = {
           overflow: 'hidden',
         },
         '.container-sm': {
-          maxWidth: '1100px',
+          maxWidth: '960px',
           width: '100%',
           margin: '0 auto',
           padding: theme('spacing.6'),
