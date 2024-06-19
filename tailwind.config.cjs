@@ -21,12 +21,12 @@ module.exports = {
         title: ['"Pacifico"', 'cursive'],
       },
       colors: {
-        pink: {
-          50: '#ffdeeb',
-          100: '#fcc2d7',
-          200: '#faa2c1',
-          300: '#f783ac',
-          400: '#f06595',
+        navyBlue: {
+          50: '#2563EB',
+          100: '#1D4ED8',
+          200: '#1E40AF',
+          300: '#1E3A8A',
+          400: '#172554',
         },
       },
       keyframes: {
@@ -70,6 +70,8 @@ module.exports = {
           boxShadow: theme('boxShadow.xl'),
         },
         '.primaryBtn': {
+          cursor: 'pointer',
+          lineHeight: 'inherit',
           backgroundColor: '#f9f9f9',
           marginBottom: theme('spacing[2.5]'),
         },
@@ -81,7 +83,7 @@ module.exports = {
           overflow: 'hidden',
         },
         '.container-sm': {
-          maxWidth: '960px',
+          maxWidth: '1100px',
           width: '100%',
           margin: '0 auto',
           padding: theme('spacing.6'),
