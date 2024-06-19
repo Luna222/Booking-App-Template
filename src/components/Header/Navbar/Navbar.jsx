@@ -4,7 +4,7 @@ import NAVBAR_DATA from '../../../../data/navBar.json';
 export default function Navbar() {
   return (
     <div className="container-md mb-12">
-      <div className="flex justify-between items-start mb-9">
+      <div className="flex justify-between items-start mb-8">
         <p className="text-xl font-medium">Booking Website</p>
         <div className="group-btns space-x-6">
           <button className="primaryBtn hover:bg-[#ced4da]">Register</button>
