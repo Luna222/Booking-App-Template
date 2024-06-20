@@ -28,3 +28,27 @@ html {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+
+/* Desktops on smaller screen sizes
+ 1024px / 16px = 75em */
+@media screen and (max-width: 64em) {
+  html {
+    font-size: 98%;
+  }
+}
+
+/* Tablets and under
+768px / 16px = 48em */
+@media screen and (max-width: 48em) {
+  html {
+    font-size: 96%;
+  }
+}
+
+/* Mobile
+640px / 16px = 36em */
+@media screen and (max-width: 36em) {
+  html {
+    font-size: 94%;
+  }
+}

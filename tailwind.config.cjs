@@ -56,10 +56,11 @@ module.exports = {
     }) {
       addBase({
         h1: {
-          fontSize: theme('fontSize.2xl'),
+          fontSize: theme('fontSize.4xl'),
+          fontWeight: theme('fontWeight.semibold'),
         },
         h2: {
-          fontSize: theme('fontSize.xl'),
+          fontSize: theme('fontSize.3xl'),
         },
       });
       addComponents({
@@ -70,14 +71,23 @@ module.exports = {
           boxShadow: theme('boxShadow.xl'),
         },
         '.primaryBtn': {
-          color: theme('colors.navyBlue.200'),
+          color: 'inherit',
+          backgroundColor: theme('colors.navyBlue.50'),
+          padding: '1rem 1.25rem',
+          borderRadius: '0.125rem',
+          cursor: 'pointer',
+          lineHeight: 'inherit',
+        },
+        '.secondaryBtn': {
+          color: theme('colors.navyBlue.50'),
           backgroundColor: '#e9ecef',
-          padding: '0.5rem 1rem',
+          padding: '0.5rem 0.75rem',
+          borderRadius: '0.125rem',
           cursor: 'pointer',
           lineHeight: 'inherit',
         },
         '.container-md': {
-          maxWidth: '1280px',
+          maxWidth: '1100px', //1280px
           width: '100%',
           margin: '0 auto',
           padding: theme('spacing.6'),
