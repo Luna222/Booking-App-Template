@@ -14,8 +14,8 @@ const SearchBox = () => {
   ]);
 
   return (
-    <div className="container-md max-w-[1100px] tablet:w-full tablet:absolute tablet:left-[50%] tablet:translate-x-[-50%] tablet:translate-y-[-135px] tablet:z-[1]">
-      <form action="">
+    <div className="container-md max-w-[1100px] tablet:w-full tablet:absolute tablet:left-[50%] tablet:translate-x-[-50%] tablet:translate-y-[-135px] tablet:z-[1] overflow-visible">
+      <form action="" className="h-max">
         <div className="flex flex-col tablet:flex-row tablet:justify-center tablet:items-center flex-wrap desktop:flex-nowrap p-1 bg-[#FFB700] rounded-md shadow-md mt-6 mb-4">
           <div className="flex grow shrink basis-auto items-center flex-nowrap border rounded-tl rounded-tr tablet:rounded-l tablet:rounded-tr-none p-4 bg-white text-gray-600 whitespace-nowrap">
             <i className="fa fa-bed mr-2"></i>
@@ -26,14 +26,14 @@ const SearchBox = () => {
             />
           </div>
 
-          <div className="flex grow shrink basis-auto items-center flex-nowrap border p-4 bg-white text-gray-600 relative whitespace-nowrap">
+          <div className="flex grow shrink basis-auto items-center flex-nowrap border p-4 bg-white text-gray-600 relative z-[2] whitespace-nowrap">
             <i className="fa fa-calendar mr-2"></i>
             {/* <DateRange
               editableDateInputs={true}
               onChange={item => setState([item.selection])}
               moveRangeOnFirstSelection={false}
               ranges={state}
-              className="absolute top-full left-0 z-10"
+              className="w-full tablet:w-[calc(1100px / 3)] absolute top-full left-0 z-[3]"
             /> */}
             <input
               type="text"
