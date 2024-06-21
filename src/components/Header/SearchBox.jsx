@@ -18,7 +18,7 @@ const SearchBox = () => {
       <form action="">
         <div className="flex flex-col tablet:flex-row tablet:justify-center tablet:items-center flex-wrap desktop:flex-nowrap p-1 bg-[#FFB700] rounded-md shadow-md mt-6 mb-4">
           <div className="flex grow shrink basis-auto items-center flex-nowrap border rounded-tl rounded-tr tablet:rounded-l tablet:rounded-tr-none p-4 bg-white text-gray-600 whitespace-nowrap">
-            <i className="fa fa-bed mr-2 text-gray-400"></i>
+            <i className="fa fa-bed mr-2"></i>
             <input
               type="text"
               placeholder="Where are you going?"
@@ -26,8 +26,8 @@ const SearchBox = () => {
             />
           </div>
 
-          <div className="flex grow shrink basis-auto items-center flex-nowrap border p-4 bg-white text-gray-600 whitespace-nowrap">
-            <i className="fa fa-calendar mr-2 text-gray-400"></i>
+          <div className="flex grow shrink basis-auto items-center flex-nowrap border p-4 bg-white text-gray-600 relative whitespace-nowrap">
+            <i className="fa fa-calendar mr-2"></i>
             {/* <DateRange
               editableDateInputs={true}
               onChange={item => setState([item.selection])}
@@ -49,7 +49,7 @@ const SearchBox = () => {
           </div>
 
           <div className="flex grow shrink basis-auto items-center flex-nowrap border rounded-bl rounded-br tablet:rounded-r tablet:rounded-bl-none p-4 bg-white text-gray-600 whitespace-nowrap">
-            <i className="fa fa-female mr-2 text-gray-400"></i>
+            <i className="fa fa-female mr-2"></i>
             <button className="outline-none bg-transparent placeholder-gray-400">
               2 adults · 0 children · 1 room
             </button>
