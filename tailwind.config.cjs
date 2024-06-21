@@ -85,6 +85,7 @@ module.exports = {
           color: theme('colors.navyBlue.50'),
           backgroundColor: '#e9ecef',
           padding: '0.25rem 0.5rem',
+          border: `1.5px solid ${theme('colors.navyBlue.50')}`,
           borderRadius: '0.125rem',
           cursor: 'pointer',
           lineHeight: 'inherit',
