@@ -23,33 +23,33 @@ const SearchBox = () => {
             <input
               type="text"
               placeholder="Where are you going?"
-              className="shrink outline-none bg-transparent p-2 placeholder-gray-400"
+              className="grow outline-none bg-transparent p-2 placeholder-gray-400"
             />
           </div>
 
           <div className="flex grow shrink basis-auto items-center flex-nowrap border p-2 bg-white text-gray-600 z-[2] relative whitespace-nowrap hocus:border-2 hocus:border-rose-600">
             <i className="fa fa-calendar pl-2 py-2"></i>
-            <DateRange
+            {/* <DateRange
               editableDateInputs={true}
               onChange={item => setState([item.selection])}
               moveRangeOnFirstSelection={false}
               ranges={state}
               className="absolute top-full left-0 shadow-lg z-[3]"
-            />
+            /> */}
             <input
               type="text"
               placeholder="Check-in date"
-              className="tablet:w-[130px] outline-none bg-transparent p-2 placeholder-gray-400"
+              className="grow tablet:w-[130px] outline-none bg-transparent p-2 placeholder-gray-400"
             />
-            <span className="text-gray-400">—</span>
+            <span className="grow text-gray-400">—</span>
             <input
               type="text"
               placeholder="Check-out date"
-              className="tablet:w-[130px] outline-none bg-transparent p-2 placeholder-gray-400"
+              className="grow tablet:w-[130px] outline-none bg-transparent p-2 placeholder-gray-400"
             />
           </div>
 
-          <div className="flex grow shrink basis-auto items-center flex-nowrap border rounded-tl rounded-tr tablet:rounded-l tablet:rounded-tr-none p-2 bg-white text-gray-600 whitespace-nowrap hocus:border-2 hocus:border-rose-600">
+          <div className="flex grow shrink basis-auto items-center flex-nowrap border rounded-tr rounded-br tablet:rounded-r tablet:rounded-tr-none p-2 bg-white text-gray-600 whitespace-nowrap hocus:border-2 hocus:border-rose-600">
             <i className="fa fa-female pl-2 py-2"></i>
             <input
               type="text"
