@@ -39,17 +39,17 @@ const SearchBox = () => {
             <input
               type="text"
               placeholder="Check-in date"
-              className="grow tablet:w-[130px] outline-none bg-transparent p-2 placeholder-gray-400"
+              className="grow tablet:grow-0 tablet:w-[130px] outline-none bg-transparent p-2 placeholder-gray-400"
             />
-            <span className="grow text-gray-400">—</span>
+            <span className="grow tablet:grow-0">—</span>
             <input
               type="text"
               placeholder="Check-out date"
-              className="grow tablet:w-[130px] outline-none bg-transparent p-2 placeholder-gray-400"
+              className="grow tablet:grow-0 tablet:w-[130px] outline-none bg-transparent p-2 placeholder-gray-400"
             />
           </div>
 
-          <div className="flex grow shrink basis-auto items-center flex-nowrap border rounded-tr rounded-br tablet:rounded-r tablet:rounded-tr-none p-2 bg-white text-gray-600 whitespace-nowrap hocus:border-2 hocus:border-rose-600">
+          <div className="flex grow shrink basis-auto items-center flex-nowrap border rounded-bl rounded-br tablet:rounded-r tablet:rounded-bl-none p-2 bg-white text-gray-600 whitespace-nowrap hocus:border-2 hocus:border-rose-600">
             <i className="fa fa-female pl-2 py-2"></i>
             <input
               type="text"
