@@ -19,7 +19,7 @@ const Home = () => {
   const [userArr, setUserArr] = useState(getLocalStorage(KEY_USER, []));
 
   return (
-    <div className="page-wrapper page-wrapper-home">
+    <div className="page-wrapper page-wrapper-home tablet:relative tablet:z-0">
       <Header />
       <Main />
       <Footer />
