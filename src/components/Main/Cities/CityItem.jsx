@@ -7,9 +7,9 @@ export default function CityItem(props) {
       <img
         src={props.image}
         alt="Delightful City"
-        className="h-full w-full object-cover rounded-xl"
+        className="w-full h-full object-cover rounded-xl"
       />
-      <div className="overlay absolute p-6 flex flex-col justify-end items-start inset-0 bg-gray-500/20 backdrop-brightness-100 backdrop-filter transition-all duration-200 ease-in-out group-hover:bg-white/50 group-hover:backdrop-brightness-105 rounded-xl">
+      <div className="overlay absolute p-6 flex flex-col justify-end items-start inset-0 bg-gray-500/30 backdrop-brightness-100 backdrop-filter transition-all duration-200 ease-in-out group-hover:bg-white/50 group-hover:backdrop-brightness-105 rounded-xl">
         <h2 className="text-white font-medium txt-shadow">{props.name}</h2>
         <p className="text-white font-medium txt-shadow text-2xl">
           {props.subText}

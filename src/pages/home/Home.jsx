@@ -9,7 +9,7 @@ import Main from '../../components/Main/Main.jsx';
 import Footer from '../../components/Footer/Footer.jsx';
 
 import CITY_DATA from '../../../data/city.json';
-import PROPERTY_TDATA from '../../../data/type.json';
+import PROPERTY_DATA from '../../../data/type.json';
 import HOTEL_DATA from '../../../data/hotel_list.json';
 import './Home.css';
 

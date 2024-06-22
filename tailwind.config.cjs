@@ -61,6 +61,7 @@ module.exports = {
         },
         h2: {
           fontSize: theme('fontSize.3xl'),
+          fontWeight: theme('fontWeight.semibold'),
         },
       });
       addComponents({
