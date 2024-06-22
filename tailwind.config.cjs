@@ -127,7 +127,8 @@ module.exports = {
         ==> 🤓 When you use the 'hocus' Variant Modifier, Tailwind will apply utility classes BOTH on hover and focus states.
       */
       addVariant('hocus', ['&:hover', '&:focus']);
-      addVariant('third-child', '&:nth-child(3)');
+      addVariant('first-child', '&:first-child');
+      addVariant('last-child', '&:last-child');
     }),
   ],
 };

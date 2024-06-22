@@ -5,7 +5,7 @@ import SearchBox from './SearchBox.jsx';
 export default function Header() {
   return (
     <>
-      <header className="min-h-[30vh] text-white bg-navyBlue-300 overflow-hidden tablet:mb-14">
+      <header className="min-h-[30vh] text-white bg-navyBlue-300 overflow-hidden">
         <div className="container-md flex flex-col">
           <Navbar />
           <Hero />

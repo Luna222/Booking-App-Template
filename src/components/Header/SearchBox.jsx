@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { DateRange } from 'react-date-range';
 import 'react-date-range/dist/styles.css'; // main css file
 import 'react-date-range/dist/theme/default.css'; // theme css file
 import { addDays } from 'date-fns';
 
 const SearchBox = () => {
+  const navigate = useNavigate();
   const [state, setState] = useState([
     {
       startDate: new Date(),
@@ -14,9 +16,9 @@ const SearchBox = () => {
   ]);
 
   return (
-    <div className="container-md max-w-[1100px] tablet:w-full tablet:absolute tablet:left-[50%] tablet:translate-x-[-50%] tablet:translate-y-[-135px] tablet:z-[1] overflow-visible">
+    <div className="container-md tablet:absolute tablet:left-[50%] tablet:translate-x-[-50%] tablet:translate-y-[-95px] desktop:translate-y-[-54px] tablet:z-[1] overflow-visible">
       <form action="">
-        <div className="flex flex-col tablet:flex-row tablet:justify-center tablet:items-center flex-wrap desktop:flex-nowrap p-1 bg-[#FFB700] rounded-md shadow-md mt-6 mb-4">
+        <div className="flex flex-col tablet:flex-row tablet:justify-center tablet:items-center flex-wrap desktop:flex-nowrap p-1 bg-[#FFB700] rounded-md shadow-md">
           {/* control */}
           <div className="flex grow shrink basis-auto items-center flex-nowrap border rounded-tl rounded-tr tablet:rounded-l tablet:rounded-tr-none p-2 bg-white text-gray-600 whitespace-nowrap hocus:border-2 hocus:border-rose-600">
             <i className="fa fa-bed pl-2 py-2"></i>
@@ -59,7 +61,10 @@ const SearchBox = () => {
           </div>
 
           {/* action */}
-          <button className="primaryBtn grow shrink p-4 mt-1 desktop:mt-0 tablet:ml-1 hover:bg-navyBlue-100">
+          <button
+            className="primaryBtn grow shrink p-4 mt-1 desktop:mt-0 tablet:ml-1 hover:bg-navyBlue-100"
+            onClick={() => navigate('/search')}
+          >
             Search
           </button>
         </div>
