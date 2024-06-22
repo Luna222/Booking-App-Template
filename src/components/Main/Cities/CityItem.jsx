@@ -4,7 +4,7 @@ export default function CityItem(props) {
       id="animated-city"
       className="grow shrink-0 group relative m-3 first-child:ml-0 last-child:mr-0 h-64 w-64 opacity-0 transform transition-all delay-150 duration-500 ease-out animate-fade-in-up"
     >
-      <a href="#" target="_blank">
+      <a href="#">
         <img
           src={props.image}
           alt="Delightful City"

@@ -6,6 +6,7 @@ export default function HomeItem(props) {
     >
       <a
         href="#"
+        target="_blank"
         className="flex flex-col justify-start items-start space-y-2 hover:border-2 hover:border-navyBlue-50/30"
       >
         <div className="relative">
@@ -18,7 +19,9 @@ export default function HomeItem(props) {
         </div>
 
         <div className="font-medium">
-          <p className="text-xl">{props.name}</p>
+          <p className="text-xl hover:text-purple-900 hover:underline">
+            {props.name}
+          </p>
           <p className="text-gray-500">{props.city}</p>
         </div>
       </a>
