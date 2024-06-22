@@ -7,7 +7,7 @@ export default function HomeItem(props) {
       <a
         href="#"
         target="_blank"
-        className="flex flex-col justify-start items-start space-y-2 hover:border-2 hover:border-navyBlue-50/30 visited:text-purple-900"
+        className="flex flex-col justify-start items-start space-y-2 hover:border-2 hover:border-navyBlue-50/30 visited:text-purple-900 visited:underline"
       >
         <div className="relative">
           <img
