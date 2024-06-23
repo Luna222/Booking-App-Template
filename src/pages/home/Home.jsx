@@ -18,11 +18,17 @@ const Home = () => {
   //Get data from local storage
   const [userArr, setUserArr] = useState(getLocalStorage(KEY_USER, []));
 
+  const handleAddUser = newUsrEmail => {
+    userArr.push(newUsrEmail);
+    setUserArr(userArr);
+    setLocalStorage(KEY_USER, userArr);
+  };
+
   return (
     <div className="page-wrapper page-wrapper-home tablet:relative tablet:z-0">
       <Header />
       <Main />
-      <Footer />
+      <Footer onAddUser={handleAddUser} userList={userArr} />
     </div>
   );
 };

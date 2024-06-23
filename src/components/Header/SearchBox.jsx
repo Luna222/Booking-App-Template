@@ -20,7 +20,7 @@ const SearchBox = () => {
       <form action="">
         <div className="flex flex-col tablet:flex-row tablet:justify-center tablet:items-center flex-wrap desktop:flex-nowrap p-1 bg-[#FFB700] rounded-md shadow-md">
           {/* control */}
-          <div className="flex grow shrink basis-auto items-center flex-nowrap border rounded-tl rounded-tr tablet:rounded-l tablet:rounded-tr-none p-2 bg-white text-gray-600 whitespace-nowrap hocus:border-2 hocus:border-rose-600">
+          <div className="flex grow shrink basis-auto items-center flex-nowrap border rounded-tl rounded-tr tablet:rounded-l tablet:rounded-tr-none p-2 bg-white text-gray-600 whitespace-nowrap hover:border-2 hover:border-rose-600">
             <i className="fa fa-bed pl-2 py-2"></i>
             <input
               type="text"
@@ -29,7 +29,7 @@ const SearchBox = () => {
             />
           </div>
 
-          <div className="flex grow shrink basis-auto items-center flex-nowrap border p-2 bg-white text-gray-600 z-[2] relative whitespace-nowrap hocus:border-2 hocus:border-rose-600">
+          <div className="flex grow shrink basis-auto items-center flex-nowrap border p-2 bg-white text-gray-600 z-[2] relative whitespace-nowrap hover:border-2 hover:border-rose-600">
             <i className="fa fa-calendar pl-2 py-2"></i>
             {/* <DateRange
               editableDateInputs={true}
@@ -51,7 +51,7 @@ const SearchBox = () => {
             />
           </div>
 
-          <div className="flex grow shrink basis-auto items-center flex-nowrap border rounded-bl rounded-br tablet:rounded-r tablet:rounded-bl-none p-2 bg-white text-gray-600 whitespace-nowrap hocus:border-2 hocus:border-rose-600">
+          <div className="flex grow shrink basis-auto items-center flex-nowrap border rounded-bl rounded-br tablet:rounded-r tablet:rounded-bl-none p-2 bg-white text-gray-600 whitespace-nowrap hover:border-2 hover:border-rose-600">
             <i className="fa fa-female pl-2 py-2"></i>
             <input
               type="text"
