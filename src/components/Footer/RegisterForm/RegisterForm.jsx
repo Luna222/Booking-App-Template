@@ -25,6 +25,7 @@ export default function RegisterForm({ onAddUserFw, userList }) {
 
   const handleSubmit = e => {
     e.preventDefault();
+    setSubmitted(true);
     if (emailNotValid) return;
 
     onAddUserFw(enteredEmail.toLowerCase().trim());
@@ -33,7 +34,7 @@ export default function RegisterForm({ onAddUserFw, userList }) {
     );
     //clear inputs
     setEnteredEmail('');
-    setSubmitted(true);
+    setSubmitted(false);
   };
 
   const isDup = userList.find(
@@ -42,7 +43,7 @@ export default function RegisterForm({ onAddUserFw, userList }) {
   const emailNotValid = !enteredEmail.includes('@') || !enteredEmail || isDup;
   let warningMsg = <p className="hidden"></p>;
 
-  if (isDup) {
+  if (submitted && isDup) {
     warningMsg = (
       <p className="block text-rose-600 mt-1.5">Username already exists!</p>
     );
@@ -62,7 +63,7 @@ export default function RegisterForm({ onAddUserFw, userList }) {
             type="email"
             placeholder="Your Email"
             value={enteredEmail}
-            invalid={emailNotValid}
+            invalid={submitted && emailNotValid}
             onChange={e => handleInputChange(e.target.value)}
           />
           {/* action */}
