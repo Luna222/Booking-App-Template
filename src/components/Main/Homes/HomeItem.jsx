@@ -5,7 +5,7 @@ export default function HomeItem(props) {
       className="grow shrink-0 group relative m-3 first-child:ml-0 last-child:mr-0 opacity-0 transform transition-all delay-150 duration-500 ease-out animate-fade-in-up"
     >
       <a
-        href="#"
+        href={'/detail'}
         target="_blank"
         className="flex flex-col justify-start items-start space-y-2 hover:border-2 hover:border-navyBlue-50/30 visited:text-purple-900 visited:underline"
       >
@@ -18,15 +18,15 @@ export default function HomeItem(props) {
           <div className="overlay absolute p-6 inset-0 backdrop-brightness-100 backdrop-filter transition-all duration-200 ease-in-out group-hover:bg-white/50 group-hover:backdrop-brightness-105"></div>
         </div>
 
-        <div className="font-medium space-y-1">
+        <div className="font-medium flex flex-col justify-start items-start space-y-2">
           <p className="text-xl hover:text-purple-900 hover:underline">
             {props.name}
           </p>
           <p className="text-gray-500">{props.city}</p>
           <p className="text-lg	text-gray-700">Starting from ${props.price}</p>
 
-          <p>
-            <span className="text-white bg-navyBlue-300 h-[3rem] px-1 py-1.5 mr-2">
+          <p className="flex items-center">
+            <span className="text-white bg-navyBlue-300 p-1 mr-2">
               {props.rate}
             </span>
             <span className="text-gray-600">{props.type}</span>
