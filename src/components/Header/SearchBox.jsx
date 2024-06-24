@@ -2,6 +2,7 @@ import { useState, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { DateRange } from 'react-date-range';
 import { addDays } from 'date-fns';
+import { formatDate } from '../../utils/common.js';
 import 'react-date-range/dist/styles.css'; // main css file
 import 'react-date-range/dist/theme/default.css'; // theme css file
 
@@ -16,17 +17,38 @@ const SearchBox = () => {
   ]);
 
   const navigate = useNavigate();
+  const dateRangeRef = useRef(null);
   const checkInRef = useRef(null);
   const checkoutRef = useRef(null);
 
   const handleSelect = item => {
     setDateState([item.selection]);
 
-    checkInRef.current.value = item.selection.startDate;
-    checkoutRef.current.value = item.selection.endDate;
+    checkInRef.current.value = formatDate(item.selection.startDate);
+    checkoutRef.current.value = formatDate(item.selection.endDate);
   };
 
-  //todo: format date inputs
+  const handleFwdDate = e => {
+    e.preventDefault();
+    const dateRangeInput = {
+      startDate: checkInRef.current.value,
+      endDate: checkoutRef.current.value,
+    };
+    console.log('date');
+    console.log(dateRangeInput);
+    //todo: save dateRangeInput to localStorage
+    // navigate('/search');
+  };
+
+  const handleMouseEnter = () => {
+    dateRangeRef.current.classList.remove('hidden');
+  };
+
+  const handleMouseLeave = () => {
+    dateRangeRef.current.classList.add('hidden');
+  };
+
+  //todo: format date inputs (done)
   //todo: handle dateRange popup
 
   return (
@@ -43,15 +65,21 @@ const SearchBox = () => {
             />
           </div>
 
-          <div className="flex grow shrink basis-auto items-center flex-nowrap border p-2 bg-white text-gray-600 z-[2] relative whitespace-nowrap hover:border-2 hover:border-rose-600">
+          <div
+            className="flex grow shrink basis-auto items-center flex-nowrap border p-2 bg-white text-gray-600 z-[2] relative whitespace-nowrap hover:border-2 hover:border-rose-600"
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+          >
             <i className="fa fa-calendar pl-2 py-2"></i>
-            <DateRange
-              editableDateInputs={true}
-              onChange={handleSelect}
-              moveRangeOnFirstSelection={false}
-              ranges={dateState}
-              className="absolute top-full left-0 shadow-lg z-[3] w-full tablet:w-[420px]"
-            />
+            <div ref={dateRangeRef} className="hidden">
+              <DateRange
+                editableDateInputs={true}
+                onChange={handleSelect}
+                moveRangeOnFirstSelection={false}
+                ranges={dateState}
+                className="absolute top-full left-0 shadow-lg z-[3] w-full tablet:w-[420px]"
+              />
+            </div>
             <input
               type="text"
               placeholder="Check-in date"
@@ -79,17 +107,7 @@ const SearchBox = () => {
           {/* action */}
           <button
             className="primaryBtn grow shrink p-4 mt-1 desktop:mt-0 tablet:ml-1 hover:bg-navyBlue-100"
-            onClick={e => {
-              e.preventDefault();
-              const dateRangeInput = {
-                startDate: checkInRef.current.value,
-                endDate: checkoutRef.current.value,
-              };
-              console.log('date');
-              console.log(dateRangeInput);
-              //todo: save dateRangeInput to localStorage
-              // navigate('/search');
-            }}
+            onClick={handleFwdDate}
           >
             Search
           </button>

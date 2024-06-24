@@ -31,3 +31,45 @@ export const getLocalStorage = function (key, defaultVal = '') {
   if (isSupported()) return JSON.parse(localStorage.getItem(key)) ?? defaultVal;
   else console.log('Sorry! No Web Storage support..');
 };
+
+/**
+ * @brief format Date based on locales
+ *
+ * @param {Date} date
+ */
+export const formatDate = function (date) {
+  let localeBrowser, localeVI, localeUS, options;
+
+  /**
+   * @brief general configuration
+   */
+  const config = function () {
+    //get locale from User's Browser
+    localeBrowser = navigator.language;
+
+    //Viet locale
+    localeVI = 'vi-VN';
+
+    //US locale
+    localeUS = 'en-US';
+
+    //formatting date & time
+    options = {
+      day: '2-digit',
+      month: '2-digit',
+      year: 'numeric',
+    };
+  };
+
+  config();
+  return new Intl.DateTimeFormat(localeUS, options).format(date);
+};
+
+/**
+ *
+ * @param {String} dateStr
+ */
+export const validateDateFormat = function (dateStr) {
+  const regex = /^(0[1-9]|[12][0-9]|3[01])\/(0[1-9]|1[0-2])\/\d{4}$/;
+  return regex.test(dateStr);
+};
