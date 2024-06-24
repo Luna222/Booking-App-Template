@@ -7,7 +7,7 @@ import 'react-date-range/dist/theme/default.css'; // theme css file
 
 const SearchBox = () => {
   const navigate = useNavigate();
-  const [state, setState] = useState([
+  const [dateState, setDateState] = useState([
     {
       startDate: new Date(),
       endDate: addDays(new Date(), 7),
@@ -16,7 +16,7 @@ const SearchBox = () => {
   ]);
 
   const handleSelect = item => {
-    setState([item.selection]);
+    setDateState([item.selection]);
   };
 
   return (
@@ -39,7 +39,7 @@ const SearchBox = () => {
               editableDateInputs={true}
               onChange={handleSelect}
               moveRangeOnFirstSelection={false}
-              ranges={state}
+              ranges={dateState}
               className="absolute top-full left-0 shadow-lg z-[3] w-full tablet:w-[420px]"
             />
             <input
