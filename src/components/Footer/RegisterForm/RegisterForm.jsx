@@ -50,7 +50,10 @@ export default function RegisterForm({ onAddUserFw, userList }) {
   }
 
   return (
-    <div className="grow flex flex-col items-center font-medium p-6 bg-navyBlue-300">
+    <div
+      id="register"
+      className="grow flex flex-col items-center font-medium p-6 bg-navyBlue-300"
+    >
       <div className="text-center text-white mt-6 space-y-5">
         <h1>Save time, save money!</h1>
         <p className="text-lg">Sign up and we'll send the best deals to you</p>
