@@ -28,18 +28,6 @@ const SearchBox = () => {
     checkoutRef.current.value = formatDate(item.selection.endDate);
   };
 
-  const handleFwdDate = e => {
-    e.preventDefault();
-    const dateRangeInput = {
-      startDate: checkInRef.current.value,
-      endDate: checkoutRef.current.value,
-    };
-    console.log('date');
-    console.log(dateRangeInput);
-    //todo: save dateRangeInput to localStorage
-    // navigate('/search');
-  };
-
   const handleMouseEnter = () => {
     dateRangeRef.current.classList.remove('hidden');
   };
@@ -47,9 +35,6 @@ const SearchBox = () => {
   const handleMouseLeave = () => {
     dateRangeRef.current.classList.add('hidden');
   };
-
-  //todo: format date inputs (done)
-  //todo: handle dateRange popup
 
   return (
     <div className="container-md tablet:absolute tablet:left-[50%] tablet:translate-x-[-50%] tablet:translate-y-[-95px] desktop:translate-y-[-54px] tablet:z-[1] overflow-visible">
@@ -107,7 +92,7 @@ const SearchBox = () => {
           {/* action */}
           <button
             className="primaryBtn grow shrink p-4 mt-1 desktop:mt-0 tablet:ml-1 hover:bg-navyBlue-100"
-            onClick={handleFwdDate}
+            onClick={() => navigate('/search')}
           >
             Search
           </button>
