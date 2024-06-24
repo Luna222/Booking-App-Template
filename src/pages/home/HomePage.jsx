@@ -11,7 +11,7 @@ import Footer from '../../components/Footer/Footer.jsx';
 import CITY_DATA from '../../../data/city.json';
 import PROPERTY_DATA from '../../../data/type.json';
 import HOTEL_DATA from '../../../data/hotel_list.json';
-import './Home.css';
+import './HomePage.css';
 
 const Home = () => {
   const [filteredHomes, setFilteredHomes] = useState(HOTEL_DATA);
