@@ -14,7 +14,7 @@ function ListItem(props) {
 
 export default function Info() {
   return (
-    <div className="container-md grid grid-cols-3 tablet:grid-cols-5 items-start gap-6 tablet:gap-10 text-navyBlue-300 text-sm text-wrap">
+    <div className="container-md grid grid-cols-3 tablet:grid-cols-5 justify-center items-start gap-6 tablet:gap-10 text-navyBlue-300 text-sm text-wrap">
       {FOOTER_DATA.map(({ col_number, col_values }) => (
         <ListItem key={col_number} values={col_values} />
       ))}
