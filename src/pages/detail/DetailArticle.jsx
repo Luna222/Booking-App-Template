@@ -20,7 +20,7 @@ export default function DetailArticle(props) {
               <p className="text-green-700">{props.price}</p>
             </div>
 
-            <button className="primaryBtn hover:bg-navyBlue-100 rounded-md">
+            <button className="primaryBtnRound hover:bg-navyBlue-100">
               Reserve or Book Now!
             </button>
           </div>

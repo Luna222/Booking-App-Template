@@ -80,6 +80,15 @@ module.exports = {
           cursor: 'pointer',
           lineHeight: 'inherit',
         },
+        '.primaryBtnRound': {
+          fontWeight: theme('fontWeight.medium'),
+          color: theme('colors.white'),
+          backgroundColor: theme('colors.navyBlue.50'),
+          padding: '0.75rem 1rem',
+          borderRadius: '0.375rem',
+          cursor: 'pointer',
+          lineHeight: 'inherit',
+        },
         '.secondaryBtn': {
           fontSize: theme('fontSize.sm'),
           fontWeight: theme('fontWeight.medium'),

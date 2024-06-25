@@ -70,7 +70,7 @@ export default function RegisterForm({ onAddUserFw, userList }) {
             onChange={e => handleInputChange(e.target.value)}
           />
           {/* action */}
-          <button className="primaryBtn grow-0 shrink px-2 py-4 rounded-md hover:bg-navyBlue-100">
+          <button className="primaryBtnRound grow-0 shrink px-2 py-4 hover:bg-navyBlue-100">
             Subscribe
           </button>
         </div>
