@@ -74,6 +74,7 @@ module.exports = {
         '.primaryBtn': {
           fontWeight: theme('fontWeight.medium'),
           color: theme('colors.white'),
+          textAlign: 'center',
           backgroundColor: theme('colors.navyBlue.50'),
           padding: '0.75rem 1rem',
           borderRadius: '0.125rem',
@@ -83,6 +84,7 @@ module.exports = {
         '.primaryBtnRound': {
           fontWeight: theme('fontWeight.medium'),
           color: theme('colors.white'),
+          textAlign: 'center',
           backgroundColor: theme('colors.navyBlue.50'),
           padding: '0.75rem 1rem',
           borderRadius: '0.375rem',
@@ -93,6 +95,7 @@ module.exports = {
           fontSize: theme('fontSize.sm'),
           fontWeight: theme('fontWeight.medium'),
           color: theme('colors.navyBlue.50'),
+          textAlign: 'center',
           backgroundColor: '#e9ecef',
           padding: '0.25rem 0.5rem',
           border: `1.5px solid ${theme('colors.navyBlue.50')}`,

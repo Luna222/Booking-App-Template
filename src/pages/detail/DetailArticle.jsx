@@ -1,4 +1,12 @@
 export default function DetailArticle(props) {
+  const BookingCTA = () => {
+    return (
+      <a href="#" className="primaryBtnRound hover:bg-navyBlue-100">
+        Reserve or Book Now!
+      </a>
+    );
+  };
+
   return (
     <article>
       <div className="container-md flex flex-col space-y-6 tablet:space-y-10 font-medium">
@@ -19,10 +27,7 @@ export default function DetailArticle(props) {
               <p className="text-navyBlue-50">{props.distance}</p>
               <p className="text-green-700">{props.price}</p>
             </div>
-
-            <a href="#" className="primaryBtnRound hover:bg-navyBlue-100">
-              Reserve or Book Now!
-            </a>
+            <BookingCTA />
           </div>
 
           <div className="grid grid-cols-2 tablet:grid-cols-3 justify-center items-stretch gap-1.5">
@@ -33,12 +38,28 @@ export default function DetailArticle(props) {
         </div>
 
         {/* 2nd section */}
-        <div className="tablet:flex tablet:justify-start tablet:items-start space-x-4 text-wrap">
-          <div className="tablet:shrink desktop:grow space-y-3">
+        <div className="tablet:flex tablet:items-start tablet:space-x-5 space-y-4 tablet:space-y-0 text-wrap">
+          <div className="space-y-3">
             <h2>{props.title}</h2>
-            <p>{props.description}</p>
+            <p className="text-gray-600">{props.description}</p>
           </div>
-          <div className="tablet:grow-0 tablet:shrink bg-navyBlue-50/50"></div>
+
+          <div className="tablet:shrink-0 tablet:w-[300px] flex flex-col justify-start items-stretch bg-navyBlue-50/20 space-y-6 p-5 text-gray-600">
+            <p className="text-xl font-semibold">Perfect for a 9-night stay!</p>
+
+            <p>
+              Located in the real heart of Krakow, this property has an
+              excellent location score of 9.8!
+            </p>
+
+            <p className="text-3xl">
+              <span className="text-gray-700 font-extrabold">
+                ${props['nine_night_price']}
+              </span>
+              &nbsp;(9 nights)
+            </p>
+            <BookingCTA />
+          </div>
         </div>
       </div>
     </article>
