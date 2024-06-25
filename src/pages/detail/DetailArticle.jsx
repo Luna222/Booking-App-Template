@@ -20,9 +20,9 @@ export default function DetailArticle(props) {
               <p className="text-green-700">{props.price}</p>
             </div>
 
-            <button className="primaryBtnRound hover:bg-navyBlue-100">
+            <a href="#" className="primaryBtnRound hover:bg-navyBlue-100">
               Reserve or Book Now!
-            </button>
+            </a>
           </div>
 
           <div className="grid grid-cols-2 tablet:grid-cols-3 justify-center items-stretch gap-1.5">
@@ -34,10 +34,11 @@ export default function DetailArticle(props) {
 
         {/* 2nd section */}
         <div className="tablet:flex tablet:justify-start tablet:items-start space-x-4 text-wrap">
-          <div className="tablet:shrink desktop:grow">
+          <div className="tablet:shrink desktop:grow space-y-3">
             <h2>{props.title}</h2>
+            <p>{props.description}</p>
           </div>
-          <div className="tablet:grow-0 tablet:shrink"></div>
+          <div className="tablet:grow-0 tablet:shrink bg-navyBlue-50/50"></div>
         </div>
       </div>
     </article>

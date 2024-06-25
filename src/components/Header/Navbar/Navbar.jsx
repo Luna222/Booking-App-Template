@@ -10,7 +10,7 @@ export default function Navbar() {
           <a href="#register" className="secondaryBtn hover:bg-[#ced4da]">
             Register
           </a>
-          <a href="#register" className="secondaryBtn hover:bg-[#ced4da]">
+          <a href="#" className="secondaryBtn hover:bg-[#ced4da]">
             Login
           </a>
         </div>

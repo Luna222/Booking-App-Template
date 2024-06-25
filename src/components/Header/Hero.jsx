@@ -6,9 +6,9 @@ export default function Hero() {
         Get rewarded for your travels — unlock instant savings of 10% or more
         with a free account
       </p>
-      <button className="primaryBtn hover:bg-navyBlue-100">
+      <a href="#register" className="primaryBtn hover:bg-navyBlue-100">
         Sign in / Register
-      </button>
+      </a>
     </div>
   );
 }
