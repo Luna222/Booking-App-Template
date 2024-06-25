@@ -1,5 +1,5 @@
-import PROPERTY_DATA from '../../../../data/type.json';
 import PropItem from './PropItem';
+import PROPERTY_DATA from '../../../../data/type.json';
 
 export default function PropertyTypes() {
   return (

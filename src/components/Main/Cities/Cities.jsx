@@ -1,5 +1,5 @@
-import CITY_DATA from '../../../../data/city.json';
 import CityItem from './CityItem';
+import CITY_DATA from '../../../../data/city.json';
 
 export default function Cities() {
   return (

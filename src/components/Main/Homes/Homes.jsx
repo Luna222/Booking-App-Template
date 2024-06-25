@@ -1,5 +1,5 @@
-import HOTEL_DATA from '../../../../data/hotel_list.json';
 import HomeItem from './HomeItem';
+import HOTEL_DATA from '../../../../data/hotel_list.json';
 
 export default function Homes() {
   return (
