@@ -11,7 +11,16 @@ const DetailPage = ({ onAddUser, userList }) => {
           <Navbar />
         </div>
       </div>
-      <DetailArticle />
+      <DetailArticle
+        name={DETAIL_DATA.name}
+        address={DETAIL_DATA.address}
+        distance={DETAIL_DATA.distance}
+        price={DETAIL_DATA.price}
+        photos={DETAIL_DATA.price}
+        title={DETAIL_DATA.title}
+        description={DETAIL_DATA.description}
+        nine_night_price={DETAIL_DATA['nine_night_price']}
+      />
       <Footer onAddUser={onAddUser} userList={userList} />
     </div>
   );
