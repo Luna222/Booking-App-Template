@@ -28,6 +28,12 @@ module.exports = {
           300: '#1E3A8A',
           400: '#172554',
         },
+        amberHoney: {
+          50: '#FFB700',
+        },
+        leafGreen: {
+          50: '#15803d',
+        },
       },
       keyframes: {
         fadeInUp: {
@@ -65,12 +71,6 @@ module.exports = {
         },
       });
       addComponents({
-        '.card': {
-          backgroundColor: theme('colors.sky.100'),
-          borderRadius: theme('borderRadius.lg'),
-          padding: theme('spacing.6'),
-          boxShadow: theme('boxShadow.xl'),
-        },
         '.primaryBtn': {
           fontWeight: theme('fontWeight.medium'),
           color: theme('colors.white'),
@@ -132,6 +132,16 @@ module.exports = {
         },
         '.animate-fade-in-up': {
           animation: theme('animation.fade-in-up'),
+        },
+        '.txt-label': {
+          color: theme('colors.gray.700'),
+        },
+        '.txt-gray': {
+          color: theme('colors.gray.600'),
+        },
+        '.sub-txt': {
+          color: theme('colors.gray.500'),
+          fontWeight: theme('fontWeight.medium'),
         },
       });
       /*

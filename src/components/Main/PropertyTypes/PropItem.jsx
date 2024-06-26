@@ -16,7 +16,7 @@ export default function PropItem(props) {
 
         <div className="font-medium">
           <p className="text-xl">{props.name}</p>
-          <p className="text-gray-500">{props.count}&nbsp;hotels</p>
+          <p className="sub-txt">{props.count}&nbsp;hotels</p>
         </div>
       </a>
     </figure>

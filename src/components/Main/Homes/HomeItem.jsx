@@ -22,14 +22,14 @@ export default function HomeItem(props) {
           <p className="text-xl hover:text-purple-900 hover:underline">
             {props.name}
           </p>
-          <p className="text-gray-500">{props.city}</p>
-          <p className="text-lg text-gray-700">Starting from ${props.price}</p>
+          <p className="sub-txt">{props.city}</p>
+          <p className="text-lg txt-label">Starting from ${props.price}</p>
 
           <p className="flex items-center">
             <span className="text-white bg-navyBlue-300 p-1 mr-2">
               {props.rate}
             </span>
-            <span className="text-gray-600">{props.type}</span>
+            <span className="txt-gray">{props.type}</span>
           </p>
         </div>
       </a>
