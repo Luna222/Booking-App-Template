@@ -1,5 +1,5 @@
 import Navbar from '../../components/Header/Navbar/Navbar.jsx';
-import DetailArticle from './DetailArticle.jsx';
+import DetailArticle from '../../components/DetailArticle.jsx';
 import Footer from '../../components/Footer/Footer.jsx';
 import DETAIL_DATA from '../../../data/detail.json';
 
