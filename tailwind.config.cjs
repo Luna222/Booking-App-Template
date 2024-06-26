@@ -69,6 +69,10 @@ module.exports = {
           fontSize: theme('fontSize.3xl'),
           fontWeight: theme('fontWeight.semibold'),
         },
+        h3: {
+          fontSize: theme('fontSize.2xl'),
+          fontWeight: theme('fontWeight.semibold'),
+        },
       });
       addComponents({
         '.primaryBtn': {
