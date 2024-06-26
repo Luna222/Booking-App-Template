@@ -1,10 +1,13 @@
 import DateInput from '../DateInput.jsx';
 
 const SearchBox = () => {
-  const dateInputClasses =
+  const dateContainerClasses =
     'flex grow shrink basis-auto items-center flex-nowrap border p-2 bg-white text-gray-600 z-[2] relative whitespace-nowrap hover:border-2 hover:border-rose-600';
 
   const dateIconClasses = 'fa fa-calendar pl-2 py-2';
+
+  const dateInputClasses =
+    'grow tablet:grow-0 tablet:w-[130px] outline-none bg-transparent p-2 placeholder-gray-400';
 
   return (
     <div className="container-md tablet:absolute tablet:left-[50%] tablet:translate-x-[-50%] tablet:translate-y-[-95px] desktop:translate-y-[-54px] tablet:z-[1] overflow-visible">
@@ -21,8 +24,9 @@ const SearchBox = () => {
           </div>
 
           <DateInput
-            dateInputClasses={dateInputClasses}
+            dateContainerClasses={dateContainerClasses}
             dateIconClasses={dateIconClasses}
+            dateInputClasses={dateInputClasses}
           />
 
           <div className="flex grow shrink basis-auto items-center flex-nowrap border rounded-bl rounded-br tablet:rounded-r tablet:rounded-bl-none p-2 bg-white text-gray-600 whitespace-nowrap hover:border-2 hover:border-rose-600">

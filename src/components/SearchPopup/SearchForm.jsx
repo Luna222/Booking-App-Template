@@ -1,8 +1,13 @@
+import DateInput from '../DateInput';
+
 export default function SearchForm() {
-  const dateInputClasses =
-    'flex grow shrink basis-auto items-center flex-nowrap border p-2 bg-white text-gray-600 z-[2] relative whitespace-nowrap hover:border-2 hover:border-rose-600';
+  const dateContainerClasses =
+    'flex items-center flex-nowrap bg-white z-[2] relative whitespace-nowrap hover:border-2 hover:border-rose-600';
 
   const dateIconClasses = 'hidden';
+
+  const dateInputClasses =
+    'w-full p-3 rounded-sm focus:outline-none placeholder-gray-400';
 
   return (
     <form action="" className="space-y-10">
@@ -19,10 +24,15 @@ export default function SearchForm() {
 
         <div className="grow space-y-1">
           <label className="block txt-label">Check-in Date</label>
-          <input
+          {/* <input
             type="text"
             className="w-full p-3 rounded-sm hover:border-2 hover:border-rose-600 focus:outline-none placeholder-gray-400"
             placeholder="06/24/2022 to 06/24/2022"
+          /> */}
+          <DateInput
+            dateContainerClasses={dateContainerClasses}
+            dateIconClasses={dateIconClasses}
+            dateInputClasses={dateInputClasses}
           />
         </div>
 

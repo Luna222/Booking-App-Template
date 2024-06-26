@@ -5,7 +5,11 @@ import { formatDate } from '../utils/common.js';
 import 'react-date-range/dist/styles.css'; // main css file
 import 'react-date-range/dist/theme/default.css'; // theme css file
 
-export default function DateInput({ dateInputClasses, dateIconClasses }) {
+export default function DateInput({
+  dateContainerClasses,
+  dateIconClasses,
+  dateInputClasses,
+}) {
   const [dateState, setDateState] = useState([
     {
       startDate: new Date(),
@@ -36,7 +40,7 @@ export default function DateInput({ dateInputClasses, dateIconClasses }) {
 
   return (
     <div
-      className={dateInputClasses}
+      className={dateContainerClasses}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
@@ -54,14 +58,14 @@ export default function DateInput({ dateInputClasses, dateIconClasses }) {
         type="text"
         placeholder="Check-in date"
         ref={checkInRef}
-        className="grow tablet:grow-0 tablet:w-[130px] outline-none bg-transparent p-2 placeholder-gray-400"
+        className={dateInputClasses}
       />
       <span className="grow tablet:grow-0">—</span>
       <input
         type="text"
         placeholder="Check-out date"
         ref={checkoutRef}
-        className="grow tablet:grow-0 tablet:w-[130px] outline-none bg-transparent p-2 placeholder-gray-400"
+        className={dateInputClasses}
       />
     </div>
   );
