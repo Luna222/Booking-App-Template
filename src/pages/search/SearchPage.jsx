@@ -13,7 +13,7 @@ const SearchPage = ({ onAddUser, userList }) => {
         </div>
       </div>
 
-      <div className="container-md grid grid-cols-1 tablet:grid-cols-3 justify-center items-start gap-7 font-medium text-gray-600">
+      <div className="container-md grid grid-cols-1 tablet:grid-cols-[32%_68%] justify-center items-start gap-7 font-medium txt-gray overflow-visible">
         <SearchPopup />
         <SearchList />
       </div>
