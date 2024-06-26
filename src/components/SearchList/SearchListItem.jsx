@@ -6,7 +6,7 @@ export default function SearchListItem(props) {
           <img
             src={props['image_url']}
             alt="Delightful Hotel"
-            className="w-[195px] h-[205px] tablet:w-[210px] tablet:h-[225px] object-cover"
+            className="w-[168px] h-[180px] tablet:w-[210px] tablet:h-[225px] object-cover"
           />
           <div className="overlay absolute p-6 inset-0 backdrop-brightness-100 backdrop-filter transition-all duration-200 ease-in-out group-hover:bg-white/50 group-hover:backdrop-brightness-105"></div>
         </div>
