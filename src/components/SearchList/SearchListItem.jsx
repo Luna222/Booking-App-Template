@@ -13,8 +13,8 @@ export default function SearchListItem(props) {
 
         <div className="grow">
           <div className="flex flex-col justify-start items-stretch space-y-1">
-            <div className="grow flex justify-start items-center space-x-20">
-              <h3 className="text-navyBlue-50/95">{props.name}</h3>
+            <div className="grow flex justify-start items-center space-x-11">
+              <h3 className="grow text-navyBlue-50/95">{props.name}</h3>
               <p className="grow flex justify-between items-start">
                 <span className="txt-label">{props['rate_text']}</span>
                 <span className="text-white bg-navyBlue-300 p-1">
