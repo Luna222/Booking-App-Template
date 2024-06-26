@@ -1,4 +1,9 @@
 export default function SearchForm() {
+  const dateInputClasses =
+    'flex grow shrink basis-auto items-center flex-nowrap border p-2 bg-white text-gray-600 z-[2] relative whitespace-nowrap hover:border-2 hover:border-rose-600';
+
+  const dateIconClasses = 'hidden';
+
   return (
     <form action="" className="space-y-10">
       {/* control */}

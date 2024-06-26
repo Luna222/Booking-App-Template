@@ -1,40 +1,10 @@
-import { useState, useRef } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { DateRange } from 'react-date-range';
-import { addDays } from 'date-fns';
-import { formatDate } from '../../utils/common.js';
-import 'react-date-range/dist/styles.css'; // main css file
-import 'react-date-range/dist/theme/default.css'; // theme css file
+import DateInput from '../DateInput.jsx';
 
 const SearchBox = () => {
-  const [dateState, setDateState] = useState([
-    {
-      startDate: new Date(),
-      // endDate: addDays(new Date(), 0),
-      endDate: new Date(), //ensure the end date is not pre-selected
-      key: 'selection',
-    },
-  ]);
+  const dateInputClasses =
+    'flex grow shrink basis-auto items-center flex-nowrap border p-2 bg-white text-gray-600 z-[2] relative whitespace-nowrap hover:border-2 hover:border-rose-600';
 
-  const navigate = useNavigate();
-  const dateRangeRef = useRef(null);
-  const checkInRef = useRef(null);
-  const checkoutRef = useRef(null);
-
-  const handleSelect = item => {
-    setDateState([item.selection]);
-
-    checkInRef.current.value = formatDate(item.selection.startDate);
-    checkoutRef.current.value = formatDate(item.selection.endDate);
-  };
-
-  const handleMouseEnter = () => {
-    dateRangeRef.current.classList.remove('hidden');
-  };
-
-  const handleMouseLeave = () => {
-    dateRangeRef.current.classList.add('hidden');
-  };
+  const dateIconClasses = 'fa fa-calendar pl-2 py-2';
 
   return (
     <div className="container-md tablet:absolute tablet:left-[50%] tablet:translate-x-[-50%] tablet:translate-y-[-95px] desktop:translate-y-[-54px] tablet:z-[1] overflow-visible">
@@ -50,35 +20,10 @@ const SearchBox = () => {
             />
           </div>
 
-          <div
-            className="flex grow shrink basis-auto items-center flex-nowrap border p-2 bg-white text-gray-600 z-[2] relative whitespace-nowrap hover:border-2 hover:border-rose-600"
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
-          >
-            <i className="fa fa-calendar pl-2 py-2"></i>
-            <div ref={dateRangeRef} className="hidden">
-              <DateRange
-                editableDateInputs={true}
-                onChange={handleSelect}
-                moveRangeOnFirstSelection={false}
-                ranges={dateState}
-                className="absolute top-full left-0 shadow-lg z-[3] w-full tablet:w-[420px]"
-              />
-            </div>
-            <input
-              type="text"
-              placeholder="Check-in date"
-              ref={checkInRef}
-              className="grow tablet:grow-0 tablet:w-[130px] outline-none bg-transparent p-2 placeholder-gray-400"
-            />
-            <span className="grow tablet:grow-0">—</span>
-            <input
-              type="text"
-              placeholder="Check-out date"
-              ref={checkoutRef}
-              className="grow tablet:grow-0 tablet:w-[130px] outline-none bg-transparent p-2 placeholder-gray-400"
-            />
-          </div>
+          <DateInput
+            dateInputClasses={dateInputClasses}
+            dateIconClasses={dateIconClasses}
+          />
 
           <div className="flex grow shrink basis-auto items-center flex-nowrap border rounded-bl rounded-br tablet:rounded-r tablet:rounded-bl-none p-2 bg-white text-gray-600 whitespace-nowrap hover:border-2 hover:border-rose-600">
             <i className="fa fa-female pl-2 py-2"></i>
