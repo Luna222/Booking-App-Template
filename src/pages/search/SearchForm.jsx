@@ -24,7 +24,7 @@ export default function SearchForm() {
         <div className="grow space-y-4">
           <label className="block txt-label">Options</label>
 
-          <div className="flex flex-col justify-start items-stretch text-left space-y-4 ml-3">
+          <div className="flex flex-col justify-start items-stretch text-left space-y-4 mx-3">
             <div className="grow flex justify-between items-start space-x-5">
               <label className="sub-txt text-sm">Min price per night</label>
               <input
