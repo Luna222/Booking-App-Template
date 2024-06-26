@@ -2,7 +2,6 @@ import Navbar from '../../components/Header/Navbar/Navbar';
 import Footer from '../../components/Footer/Footer';
 import SearchPopup from '../../components/SearchPopup/SearchPopup';
 import SearchList from '../../components/SearchList/SearchList';
-import SEARCH_DATA from '../../../data/search.json';
 
 const SearchPage = ({ onAddUser, userList }) => {
   return (
