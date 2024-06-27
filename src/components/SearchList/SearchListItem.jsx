@@ -3,7 +3,7 @@ export default function SearchListItem(props) {
     <li className="group relative border-[1.5px] border-gray-300 p-3 rounded transition-all delay-150 duration-500 ease-out hover:scale-[.98] text-wrap">
       <a
         href="#"
-        className="tablet:flex tablet:justify-start tablet:items-start space-y-7 tablet:space-x-5 tablet:relative"
+        className="tablet:flex tablet:justify-start tablet:items-start space-y-7 tablet:space-y-0 tablet:space-x-5 tablet:relative"
       >
         <div className="relative">
           <img
