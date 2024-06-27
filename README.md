@@ -7,8 +7,17 @@ _This template is inspired from Booking.com_
 - Styling: PostCSS, TailwindCSS, Autoprefixer
 
 ### 👉 How to run
-Provided that you had NodeJS & NPM installed.
-Open your terminal then run:
+Comment out this line `// base: '/Booking-App-Template/'` in vite.config.js
+```
+export default defineConfig({
+  plugins: [react()],
+  // base: '/Booking-App-Template/',
+});
+```
+<br/>
+
+Provided that you had NodeJS & NPM installed. Open your terminal then run:
+<br/>
 
 1. Navigate to React project directory
 ```
