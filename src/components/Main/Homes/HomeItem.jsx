@@ -13,7 +13,7 @@ export default function HomeItem(props) {
           <img
             src={props.imageUrl}
             alt="Delightful Hotel"
-            className="w-[244px] h-[270px] object-cover"
+            className="w-[269px] h-[295px] object-cover"
           />
           <div className="overlay absolute p-6 inset-0 backdrop-brightness-100 backdrop-filter transition-all duration-200 ease-in-out group-hover:bg-white/50 group-hover:backdrop-brightness-105"></div>
         </div>
