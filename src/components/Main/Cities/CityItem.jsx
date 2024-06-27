@@ -2,7 +2,7 @@ export default function CityItem(props) {
   return (
     <figure
       id="animated-city"
-      className="grow shrink-0 group relative m-3 first-child:ml-0 last-child:mr-0 h-64 w-64 opacity-0 transform transition-all delay-150 duration-500 ease-out animate-fade-in-up"
+      className="grow shrink-0 group relative m-3 first-child:ml-0 last-child:mr-0 h-64 w-64 tablet:w-72 tablet:h-72 opacity-0 transform transition-all delay-150 duration-500 ease-out animate-fade-in-up"
     >
       <a href="#">
         <img
