@@ -1,7 +1,7 @@
 export default function SearchListItem(props) {
   return (
     <li className="group relative border-[1.5px] border-gray-300 p-3 rounded transition-all delay-150 duration-500 ease-out hover:scale-[.98] text-wrap">
-      <a href="#" className="flex justify-start items-start space-x-5">
+      <a href="#" className="flex justify-start items-start space-x-5 relative">
         <div className="relative">
           <img
             src={props['image_url']}
@@ -12,7 +12,7 @@ export default function SearchListItem(props) {
         </div>
 
         <div className="grow">
-          <div className="flex flex-col justify-start items-stretch space-y-1">
+          <div className="flex flex-col justify-start items-stretch space-y-2">
             <div className="grow flex justify-start items-start space-x-11">
               <h3 className="tablet:grow text-navyBlue-50/95">{props.name}</h3>
               <p className="grow flex justify-between items-start space-x-4">
@@ -21,20 +21,40 @@ export default function SearchListItem(props) {
                   {props.rate}
                 </span>
               </p>
-              {/* <p className="grow ml-20 txt-label">{props['rate_text']}</p> */}
             </div>
+            <p>{props.distance} from center</p>
+            <p className="self-start px-1 py-[0.125rem] text-white text-center font-normal bg-leafGreen-50 rounded-lg">
+              {props.tag}
+            </p>
+            <p className="txt-label font-bold">{props.description}</p>
 
-            <p></p>
+            <p>{props.type}</p>
 
-            <p></p>
+            {props['free_cancel'] ? (
+              <>
+                <p className="text-leafGreen-50 font-bold">Free cancellation</p>
+                <p className="text-leafGreen-50">
+                  You can cancel later, so lock in this great price today!
+                </p>
+              </>
+            ) : (
+              ''
+            )}
 
-            <p></p>
-
-            <div className="flex"></div>
-
-            <div className="flex"></div>
-
-            <div className="flex"></div>
+            <p className="txt-label font-normal text-3xl absolute right-0 bottom-20">
+              ${props.price}
+            </p>
+            <p className="text-gray-400 text-sm absolute right-0 bottom-[3.2rem]">
+              Includes taxes and fees
+            </p>
+            <a
+              href="#"
+              className="primaryBtnRound py-[0.65rem] px-7 hover:bg-navyBlue-100 absolute bottom-0 right-0"
+            >
+              See availability
+            </a>
+            <div className="grow flex justify-start items-start space-x-11"></div>
+            <div className="grow flex justify-start items-start space-x-11"></div>
           </div>
         </div>
       </a>

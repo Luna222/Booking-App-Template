@@ -5,7 +5,9 @@ export default function Navbar() {
   return (
     <div className="mb-11">
       <div className="flex justify-between items-start mb-6">
-        <p className="text-xl font-medium">Booking Website</p>
+        <a href="/" className="text-xl font-medium">
+          Booking Website
+        </a>
         <div className="group-btns space-x-4">
           <a href="#register" className="secondaryBtn hover:bg-[#ced4da]">
             Register

@@ -1,6 +1,9 @@
+import { useNavigate } from 'react-router-dom';
 import DateInput from '../DateInput.jsx';
 
 const SearchBox = () => {
+  const navigate = useNavigate();
+
   const dateContainerClasses =
     'flex grow shrink basis-auto items-center flex-nowrap border p-2 bg-white text-gray-600 z-[2] relative whitespace-nowrap hover:border-2 hover:border-rose-600';
 
