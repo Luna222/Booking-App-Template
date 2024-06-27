@@ -39,7 +39,3 @@ npm run dev
 > <br/>
 > <br/>
 > To create a production bundle, use `npm run build` or `yarn build`.
-
- 
-
-  
