@@ -108,7 +108,7 @@ module.exports = {
           lineHeight: 'inherit',
         },
         '.container-md': {
-          maxWidth: '1100px', //1280px
+          maxWidth: '1200px', //1280px
           width: '100%',
           margin: '0 auto',
           padding: theme('spacing.6'),
