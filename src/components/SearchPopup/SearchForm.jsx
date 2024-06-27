@@ -7,7 +7,7 @@ export default function SearchForm() {
   const dateIconClasses = 'hidden';
 
   const dateInputClasses =
-    'w-full p-3 rounded-sm focus:outline-none placeholder-gray-400';
+    'w-full p-3 rounded-sm focus:outline-none placeholder-gray-400 placeholder:text-sm';
 
   return (
     <form action="" className="space-y-10">
@@ -17,7 +17,7 @@ export default function SearchForm() {
           <label className="block txt-label">Destination</label>
           <input
             type="text"
-            className="w-full p-3 rounded-sm hover:border-2 hover:border-rose-600 focus:outline-none placeholder-gray-400"
+            className="w-full p-3 rounded-sm hover:border-2 hover:border-rose-600 focus:outline-none placeholder-gray-400 placeholder:text-sm"
             placeholder="Where are you going?"
           />
         </div>
