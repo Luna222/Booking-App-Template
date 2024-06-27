@@ -7,7 +7,7 @@ export default function SearchForm() {
   const dateIconClasses = 'hidden';
 
   const dateInputClasses =
-    'w-full p-3 pr-0 last-child:pr-3 last-child:pl-0 rounded-sm focus:outline-none placeholder-gray-400';
+    'w-full p-3 rounded-sm focus:outline-none placeholder-gray-400';
 
   return (
     <form action="" className="space-y-10">
