@@ -39,7 +39,7 @@ export default function SearchListItem(props) {
             {props['free_cancel'] ? (
               <div className="space-y-2">
                 <p className="text-leafGreen-50 font-bold">Free cancellation</p>
-                <p className="text-leafGreen-50">
+                <p className="text-leafGreen-50 font-normal">
                   You can cancel later, so lock in this great price today!
                 </p>
               </div>
