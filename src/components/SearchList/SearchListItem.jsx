@@ -1,23 +1,24 @@
 export default function SearchListItem(props) {
   return (
     <li className="group relative border-[1.5px] border-gray-300 p-3 rounded transition-all delay-150 duration-500 ease-out hover:scale-[.98] text-wrap">
-      <a
-        href="#"
-        className="desktop:flex desktop:justify-start desktop:items-start space-y-7 desktop:space-y-0 desktop:space-x-5 desktop:relative"
-      >
-        <div className="relative">
+      <div className="desktop:flex desktop:justify-start desktop:items-start space-y-7 desktop:space-y-0 desktop:space-x-5 desktop:relative">
+        <a href="#" className="relative">
           <img
             src={props['image_url']}
             alt="Delightful Hotel"
             className="w-full h-[305px] desktop:w-[230px] desktop:h-[245px] object-cover"
           />
           <div className="overlay absolute p-6 inset-0 backdrop-brightness-100 backdrop-filter transition-all duration-200 ease-in-out group-hover:bg-white/50 group-hover:backdrop-brightness-105"></div>
-        </div>
+        </a>
 
         <div className="desktop:grow">
           <div className="flex flex-col justify-start items-stretch space-y-2">
             <div className="grow flex justify-between desktop:justify-start items-start desktop:space-x-20">
-              <h3 className="desktop:grow text-navyBlue-50/95">{props.name}</h3>
+              <a href="#" className="desktop:grow">
+                <h3 className="text-navyBlue-50/95 hover:text-purple-900 hover:underline">
+                  {props.name}
+                </h3>
+              </a>
               <p className="desktop:grow flex justify-between items-start space-x-16 desktop:space-x-4">
                 <span className="txt-label text-lg">{props['rate_text']}</span>
                 <span className="text-white bg-navyBlue-300 p-1">
@@ -63,7 +64,7 @@ export default function SearchListItem(props) {
             </a>
           </div>
         </div>
-      </a>
+      </div>
     </li>
   );
 }

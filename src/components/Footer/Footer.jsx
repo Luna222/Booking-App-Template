@@ -1,5 +1,5 @@
-import RegisterForm from './RegisterForm/RegisterForm.jsx';
-import Info from './Info/Info.jsx';
+import RegisterForm from './RegisterForm.jsx';
+import Info from './Info.jsx';
 
 export default function Footer({ onAddUser, userList }) {
   return (

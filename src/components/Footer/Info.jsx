@@ -1,4 +1,4 @@
-import FOOTER_DATA from '../../../../data/footer.json';
+import FOOTER_DATA from '../../../data/footer.json';
 
 function ListItem(props) {
   return (
