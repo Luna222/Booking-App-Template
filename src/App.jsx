@@ -6,11 +6,9 @@ import HomePage from './pages/home/HomePage.jsx';
 import DetailPage from './pages/detail/DetailPage.jsx';
 import SearchPage from './pages/search/SearchPage.jsx';
 
-import HOTEL_DATA from '../data/hotel_list.json';
 import './App.css';
 
 function App() {
-  const [filteredHomes, setFilteredHomes] = useState(HOTEL_DATA);
   //Get data from local storage
   const [userArr, setUserArr] = useState(getLocalStorage(KEY_USER, []));
 
