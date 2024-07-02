@@ -73,3 +73,29 @@ export const validateDateFormat = function (dateStr) {
   const regex = /^(0[1-9]|[12][0-9]|3[01])\/(0[1-9]|1[0-2])\/\d{4}$/;
   return regex.test(dateStr);
 };
+
+/**
+ *  @brief handle image lazy loading
+ */
+export const lazyLoading = function () {
+  const lazyImages = document.querySelectorAll('img.lazy-load');
+
+  const obsCallback = function (entries, observer) {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const lazyImage = entry.target;
+        lazyImage.src = lazyImage.dataset.src;
+        lazyImage.classList.remove('lazy-load');
+        lazyImageObserver.unobserve(lazyImage);
+      }
+    });
+  };
+
+  const obsOptions = {
+    root: null,
+    threshold: 0.05,
+  };
+
+  const lazyImageObserver = new IntersectionObserver(obsCallback, obsOptions);
+  lazyImages.forEach(img => lazyImageObserver.observe(img));
+};

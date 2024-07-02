@@ -7,9 +7,9 @@ export default function PropItem(props) {
       <a href="#" className="flex flex-col justify-start items-start space-y-2">
         <div className="relative">
           <img
-            src={props.image}
+            data-src={props.image}
             alt="Delightful Property"
-            className="w-[211px] h-[171px] object-cover rounded-t-xl"
+            className="w-[211px] h-[171px] object-cover rounded-t-xl lazy-load"
           />
           <div className="overlay absolute p-6 inset-0 backdrop-brightness-100 backdrop-filter transition-all duration-200 ease-in-out group-hover:bg-white/50 group-hover:backdrop-brightness-105 rounded-t-xl"></div>
         </div>

@@ -13,26 +13,32 @@ export default function DetailArticle(props) {
         {/* 1st section */}
         <div className="flex flex-col space-y-2">
           <div className="flex justify-between items-start text-wrap">
-            <div className="space-y-2">
-              <h2>{props.name}</h2>
-              <p className="space-x-2">
-                <span>
-                  <i
-                    className="fa fa-map-marker scale-110"
-                    aria-hidden="true"
-                  ></i>
-                </span>
-                <span className="sub-txt text-sm">{props.address}</span>
-              </p>
-              <p className="text-navyBlue-50">{props.distance}</p>
-              <p className="text-leafGreen-50">{props.price}</p>
-            </div>
+            <h2>{props.name}</h2>
             <BookingCTA />
+          </div>
+
+          <div className="space-y-2">
+            <p className="space-x-2">
+              <span>
+                <i
+                  className="fa fa-map-marker scale-110"
+                  aria-hidden="true"
+                ></i>
+              </span>
+              <span className="sub-txt text-sm">{props.address}</span>
+            </p>
+            <p className="text-navyBlue-50">{props.distance}</p>
+            <p className="text-leafGreen-50">{props.price}</p>
           </div>
 
           <div className="grid grid-cols-2 tablet:grid-cols-3 justify-center items-stretch gap-1.5">
             {props.photos.map((photoItem, idx) => (
-              <img src={photoItem} alt="Photo" key={idx} />
+              <img
+                data-src={photoItem}
+                alt="Photo"
+                key={idx}
+                className="lazy-load"
+              />
             ))}
           </div>
         </div>

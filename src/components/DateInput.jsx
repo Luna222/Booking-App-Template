@@ -60,7 +60,7 @@ export default function DateInput({
         ref={checkInRef}
         className={dateInputClasses}
       />
-      <span className="grow tablet:grow-0">—</span>
+      <span className="grow tablet:grow-0 text-center">—</span>
       <input
         type="text"
         placeholder="Check-out date"

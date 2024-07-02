@@ -44,7 +44,7 @@ export default function SearchForm() {
               <label className="sub-txt text-sm">Min price per night</label>
               <input
                 type="text"
-                className="grow max-w-[325px] tablet:grow-0 tablet:w-[80px] p-1 border-[1.5px] border-gray-700 rounded-sm hover:border-2 hover:border-rose-600 focus:outline-none"
+                className="max-w-[325px] tablet:w-[80px] p-1 border-[1.5px] border-gray-700 rounded-sm hover:border-2 hover:border-rose-600 focus:outline-none"
               />
             </div>
 
@@ -52,7 +52,7 @@ export default function SearchForm() {
               <label className="sub-txt text-sm">Max price per night</label>
               <input
                 type="text"
-                className="grow max-w-[325px] tablet:grow-0 tablet:w-[80px] p-1 border-[1.5px] border-gray-700 rounded-sm hover:border-2 hover:border-rose-600 focus:outline-none"
+                className="max-w-[325px] tablet:w-[80px] p-1 border-[1.5px] border-gray-700 rounded-sm hover:border-2 hover:border-rose-600 focus:outline-none"
               />
             </div>
 
@@ -60,7 +60,7 @@ export default function SearchForm() {
               <label className="sub-txt text-sm">Adult</label>
               <input
                 type="number"
-                className="grow max-w-[325px] tablet:grow-0 tablet:w-[80px] p-1 border-[1.5px] border-gray-700 rounded-sm hover:border-2 hover:border-rose-600 focus:outline-none"
+                className="max-w-[325px] tablet:w-[80px] p-1 border-[1.5px] border-gray-700 rounded-sm hover:border-2 hover:border-rose-600 focus:outline-none"
               />
             </div>
 
@@ -68,7 +68,7 @@ export default function SearchForm() {
               <label className="sub-txt text-sm">Children</label>
               <input
                 type="number"
-                className="grow max-w-[325px] tablet:grow-0 tablet:w-[80px] p-1 border-[1.5px] border-gray-700 rounded-sm hover:border-2 hover:border-rose-600 focus:outline-none"
+                className="max-w-[325px] tablet:w-[80px] p-1 border-[1.5px] border-gray-700 rounded-sm hover:border-2 hover:border-rose-600 focus:outline-none"
               />
             </div>
 
@@ -76,7 +76,7 @@ export default function SearchForm() {
               <label className="sub-txt text-sm">Room</label>
               <input
                 type="number"
-                className="grow max-w-[325px] tablet:grow-0 tablet:w-[80px] p-1 border-[1.5px] border-gray-700 rounded-sm hover:border-2 hover:border-rose-600 focus:outline-none"
+                className="max-w-[325px] tablet:w-[80px] p-1 border-[1.5px] border-gray-700 rounded-sm hover:border-2 hover:border-rose-600 focus:outline-none"
               />
             </div>
           </div>

@@ -3,7 +3,7 @@ import { useState } from 'react';
 const Input = function ({ invalid, ...props }) {
   //👉 Dynamic & Conditional Styling:
   let inputClasses =
-    'grow shrink p-4 rounded-md placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-rose-600 focus:ring-offset-0';
+    'tablet:grow tablet:shrink p-4 rounded-md placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-rose-600 focus:ring-offset-0';
 
   if (invalid) {
     inputClasses += ' text-red-500 bg-red-100 border border-rose-600';
@@ -62,7 +62,7 @@ export default function RegisterForm({ onAddUserFw, userList }) {
       </div>
 
       <form onSubmit={handleSubmit} className="mt-5 mb-7">
-        <div className="flex justify-center items-center min-w-[437px] space-x-3">
+        <div className="max-w-[337px] tablet:flex tablet:justify-center tablet:items-center tablet:min-w-[437px] space-x-3">
           {/* control */}
           <Input
             type="email"

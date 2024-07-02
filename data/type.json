@@ -2,26 +2,26 @@
   {
     "name": "Hotels",
     "count": 233,
-    "image": "../src/assets/images/type_1.webp"
+    "image": "../assets/images/type_1.webp"
   },
   {
     "name": "Apartments",
     "count": 2331,
-    "image": "../src/assets/images/type_2.jpg"
+    "image": "../assets/images/type_2.jpg"
   },
   {
     "name": "Resorts",
     "count": 2331,
-    "image": "../src/assets/images/type_3.jpg"
+    "image": "../assets/images/type_3.jpg"
   },
   {
     "name": "Villas",
     "count": 2331,
-    "image": "../src/assets/images/type_4.jpg"
+    "image": "../assets/images/type_4.jpg"
   },
   {
     "name": "Cabins",
     "count": 2331,
-    "image": "../src/assets/images/type_5.jpg"
+    "image": "../assets/images/type_5.jpg"
   }
 ]

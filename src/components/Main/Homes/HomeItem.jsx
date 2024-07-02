@@ -1,19 +1,24 @@
+import { useNavigate } from 'react-router-dom';
+
 export default function HomeItem(props) {
+  const navigate = useNavigate();
+
   return (
     <article
       id="animated-hotel"
       className="grow shrink-0 group relative m-3 first-child:ml-0 last-child:mr-0 opacity-0 transform transition-all delay-150 duration-500 ease-out animate-fade-in-up"
     >
-      <a
-        href={'/detail'}
-        target="_blank"
-        className="flex flex-col justify-start items-start space-y-2 hover:border-2 hover:border-navyBlue-50/30 visited:text-purple-900 visited:underline"
+      <div
+        // href="/detail"
+        // target="_blank"
+        onClick={() => navigate('/detail')}
+        className="item-link flex flex-col justify-start items-start space-y-2 hover:border-2 hover:border-navyBlue-50/30 cursor-pointer"
       >
         <div className="relative">
           <img
-            src={props.imageUrl}
+            data-src={props.imageUrl}
             alt="Delightful Hotel"
-            className="w-[269px] h-[295px] object-cover"
+            className="w-[269px] h-[295px] object-cover lazy-load"
           />
           <div className="overlay absolute p-6 inset-0 backdrop-brightness-100 backdrop-filter transition-all duration-200 ease-in-out group-hover:bg-white/50 group-hover:backdrop-brightness-105"></div>
         </div>
@@ -32,7 +37,7 @@ export default function HomeItem(props) {
             <span className="txt-gray">{props.type}</span>
           </p>
         </div>
-      </a>
+      </div>
     </article>
   );
 }
